@@ -5,8 +5,8 @@ import Chats from "./pages/Chats";
 import Home from "./pages/Home";
 import Messages from "./pages/Messages";
 
-const App = () => (
-  <Switch>
+const App = () => {
+  return <Switch>
     <Route path="/" component={Home} />
     <Route path="/chats" component={Chats} />
     <Route path="/messages" component={Messages} />
@@ -16,6 +16,6 @@ const App = () => (
       </div>
     </Route>
   </Switch>
-);
+}
 
 export default App;
