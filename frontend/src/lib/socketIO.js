@@ -14,9 +14,18 @@ export const init = () => {
 
 export const signin = async (username) => new Promise((resolve, reject) => {
     socket.emit('signin', username, (arg) => {
-        if (arg === true)
-            resolve(arg)
-        else
-            reject(arg)
+        if (typeof arg == 'string') reject(arg)
+        resolve(arg)
     })
 })
+
+export const newOnlineUser = (callback) => {
+    socket.on('newUserOnline', (user) => {
+        callback(user)
+    })
+}
+
+// TODO: Implement sendMessage emit
+export const sendMessage = (from, to, message) => {
+
+}

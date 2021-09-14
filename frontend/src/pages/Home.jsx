@@ -9,7 +9,8 @@ const Home = () => {
   const signinToChats = (e) => {
     e.preventDefault();
     signin(user)
-      .then((_) => {
+      .then((session) => {
+        localStorage.setItem("session", JSON.stringify(session));
         setLocation("/chats");
       })
       .catch((error) => {

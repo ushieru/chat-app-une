@@ -1,11 +1,11 @@
 import React from "react";
 import { useLocation } from "wouter";
 
-const Chat = ({ name, photo, lastMessage }) => {
+const Chat = ({ _id, name, photo, lastMessage = "" }) => {
   const [_, setLocation] = useLocation();
 
   const onClickChat = () => {
-    setLocation("/messages");
+    setLocation("/messages/" + _id);
   };
 
   return (
