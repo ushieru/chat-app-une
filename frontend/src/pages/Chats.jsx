@@ -40,6 +40,8 @@ const Chats = () => {
     localStorage.setItem("users", JSON.stringify(users));
   }, [users]);
 
+
+  // TODO: Render Meesage view in mobile
   // if (currentUser)
   //   return (
   //     <Messages
