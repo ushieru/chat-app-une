@@ -34,8 +34,8 @@ io.on('connection', (socket) => {
         // Avisar de un nuevo usuario online
         Array.from(CLIENTS_SOCKETS.values()).forEach(socket => socket.emit('newUserOnline', USER))
         // Registro
-        CLIENTS_SOCKETS.set(UUID, socket)
-        CLIENTS_INFO.set(UUID, USER)
+        CLIENTS_SOCKETS.set(USER._id, socket)
+        CLIENTS_INFO.set(USER._id, USER)
         reponse(USER)
     })
 
