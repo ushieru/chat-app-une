@@ -26,11 +26,11 @@ const Home = () => {
           value={user}
           onChange={(e) => setUser(e.target.value)}
           type="text"
-          className="rounded border border-gray-500"
+          className="rounded border border-gray-500 block"
         />
         <button
           type="submit"
-          className="bg-blue-500 py-1 px-2 text-white rounded"
+          className="bg-blue-500 py-1 px-2 text-white rounded w-full block mt-2"
         >
           Sign in
         </button>

@@ -1,0 +1,9 @@
+.media-test {
+  background-color: red;
+}
+
+@media (max-width: 600px) {
+  .media-test {
+    background-color: aqua;
+  }
+}
